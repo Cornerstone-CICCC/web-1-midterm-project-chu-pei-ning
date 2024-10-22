@@ -1,0 +1,63 @@
+@charset "UTF-8";
+#home_main {
+  text-align: center;
+  margin: 50px;
+}
+#home_main #home_title {
+  background: #F7AEF8;
+  box-shadow: 0 0 20px 0 #b388eb, inset 0 0 20px 0 #b388eb; /* 虛化外框 */
+  padding: 20px 0 20px 0;
+}
+#home_main #home_title h1 {
+  background: #F7AEF8;
+  margin: 10px 50px;
+}
+#home_main .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8093F1; /* 按鈕背景顏色 */
+  color: white; /* 按鈕文字顏色 */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px; /* 圓角 */
+  font-size: 16px;
+}
+#home_main .btn:hover {
+  background-color: #72DDF7; /* 滑鼠懸停時的顏色 */
+  color: black;
+}
+
+header {
+  background: #F7AEF8;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+header h3 {
+  background: #F7AEF8;
+  margin: 5px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0%;
+  gap: 13px;
+}
+
+* {
+  box-sizing: border-box;
+  background: #F4F4ED;
+}
+* .en_word {
+  font-family: Bradley Hand, cursive;
+}
+* .zh_word {
+  font-family: cwTeXFangSong, serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

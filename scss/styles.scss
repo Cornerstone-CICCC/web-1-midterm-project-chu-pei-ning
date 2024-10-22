@@ -1,0 +1,16 @@
+@import './variables';
+@import './home.scss';
+@import './index';
+
+
+* {
+      box-sizing: border-box;
+      background: $main-background-color;
+      .en_word {
+            font-family: $main-font-style;
+      }
+      .zh_word {
+            font-family: $main-font-style-zh;
+      }
+
+}
