@@ -1,11 +1,11 @@
 @import './variables';
 @import './home.scss';
-@import './index';
+@import './index.scss';
 
 
 * {
       box-sizing: border-box;
-      background: $main-background-color;
+      
       .en_word {
             font-family: $main-font-style;
       }
