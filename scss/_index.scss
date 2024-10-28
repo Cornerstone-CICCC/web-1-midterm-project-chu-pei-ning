@@ -55,8 +55,9 @@ main {
                   ul {
                         display: flex;
                         flex-direction: row;
+                        flex-wrap: wrap;
                         justify-content: center;
-                        gap: 70px;
+                        gap: 75px;
                   }
                   img {
                         width: 55px;
