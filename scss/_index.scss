@@ -10,12 +10,13 @@ body {
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      h2 {
+      h1 {
             margin: 0px;
-      }
+            color: #13001b;
+}
 
       nav {
-            justify-self: flex-end;
+            
             ul {
                   list-style: none;
                   display: flex; 
@@ -37,13 +38,12 @@ main {
       justify-content: center;
       .container {
             background: $rice-color;
-            width: 94%;
             height: auto;
             padding: 10px 40px 15px 40px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            margin: 20px;
+            margin: 20px 30px;
             border-radius: 10px;
-            h2 {
+            h2, h3 {
                   text-align: center;
                   background: -webkit-linear-gradient(right, #f894e1, #13001b, #f894e1, #13001b);
                   background-clip: text;
@@ -51,8 +51,111 @@ main {
             }
       }
       #skill {
-            li {
-                  list-style: none;
+            nav {
+                  ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        gap: 70px;
+                  }
+                  img {
+                        width: 55px;
+                  }
+                  li {
+                        margin: 0;
+                        list-style: none;
+                        text-align: center;
+                  }      
+            }
+      }
+      #experience {
+            /* The actual timeline (the vertical ruler) */
+            .timeline {
+                  position: relative;
+                  max-width: 1200px;
+                  margin: 0 auto;
+            }
+            
+            /* The actual timeline (the vertical ruler) */
+            .timeline::after {
+                  content: '';
+                  position: absolute;
+                  width: 6px;
+                  background-color: white;
+                  top: 0;
+                  bottom: 0;
+                  left: 50%;
+                  margin-left: -3px;
+            }
+            
+            /* ex-container around content */
+            .ex-container {
+                  padding: 10px 40px;
+                  position: relative;
+                  background-color: inherit;
+                  width: 50%;
+            }
+            .content {
+                  background-color: white;
+                  padding: 10px 10px 10px 10px;
+                  border-radius: 15px;
+            }
+            
+            /* The circles on the timeline */
+            .ex-container::after {
+                  content: '';
+                  position: absolute;
+                  width: 25px;
+                  height: 25px;
+                  right: -17px;
+                  background-color: white;
+                  border: 4px solid $rich-brilliant-lavender-color;
+                  top: 24px;
+                  border-radius: 50%;
+                  z-index: 1;
+            }
+            
+            /* Place the container to the left */
+            .left {
+                  left: 0;
+            }
+            
+            /* Place the container to the right */
+            .right {
+                  left: 50%;
+            }
+            
+            /* Add arrows to the left container (pointing right) */
+            .left::before {
+                  content: " ";
+                  height: 0;
+                  position: absolute;
+                  top: 24px;
+                  width: 0;
+                  z-index: 1;
+                  right: 30px;
+                  border: medium solid $lavender;
+                  border-width: 10px 0 10px 10px;
+                  border-color: transparent transparent transparent white;
+            }
+            
+            /* Add arrows to the right container (pointing left) */
+            .right::before {
+                  content: " ";
+                  height: 0;
+                  position: absolute;
+                  top: 24px;
+                  width: 0;
+                  z-index: 1;
+                  left: 30px;
+                  border: medium solid $lavender;
+                  border-width: 10px 10px 10px 0;
+                  border-color: transparent white transparent transparent;
+            }
+            
+            /* Fix the circle for containers on the right side */
+            .right::after {
+                  left: -16px;
             }
       }
 
@@ -140,9 +243,6 @@ main {
                   background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
                   transition: all 0.4s;
             }
-            .submit-btn .input-data:hover .inner{
-                  left: 0;
-            }
             .submit-btn .input-data input{
                   background: none;
                   border: none;
@@ -153,7 +253,6 @@ main {
                   letter-spacing: 1px;
                   cursor: pointer;
                   position: relative;
-                  /*z-index: 2;*/
             }          
       }
       .back-to-top-btn {
@@ -162,7 +261,7 @@ main {
             right: 0;
             display: flex;
             justify-content: flex-end;
-            padding: 0 10px 0 0;
+            padding: 0 40px 0 0;
       }     
       
 }
